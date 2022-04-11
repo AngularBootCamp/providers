@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject, firstValueFrom } from 'rxjs';
 import { shareReplay, startWith, switchMap } from 'rxjs/operators';
 
 import { ClickService } from '../click.service';
@@ -21,7 +21,7 @@ export class SinglePlayerService implements ClickService {
   }
 
   async increment() {
-    await this.http.post(apiUrl + '/increment', '').toPromise();
+    await firstValueFrom(this.http.post(apiUrl + '/increment', ''));
     this.refresh.next();
   }
 }
