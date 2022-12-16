@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Socket } from 'ngx-socket-io';
-import { shareReplay } from 'rxjs/operators';
+import { shareReplay } from 'rxjs';
 
 import { ClickService } from '../click.service';
 

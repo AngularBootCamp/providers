@@ -1,7 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Subject, firstValueFrom } from 'rxjs';
-import { shareReplay, startWith, switchMap } from 'rxjs/operators';
+import {
+  Subject,
+  firstValueFrom,
+  shareReplay,
+  startWith,
+  switchMap
+} from 'rxjs';
 
 import { ClickService } from '../click.service';
 
