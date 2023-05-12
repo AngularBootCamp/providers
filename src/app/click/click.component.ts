@@ -3,11 +3,13 @@ import { Component } from '@angular/core';
 import { ClickService } from '../click.service';
 
 @Component({
-  selector: 'local-click',
-  template: ` <button>
+  selector: 'app-local-click',
+  template: `
+    <button>
       <img src="assets/logo.png" (click)="increment()" />
     </button>
-    <h4># of Clicks: {{ totalClicks | async }}</h4>`,
+    <h4># of Clicks: {{ totalClicks | async }}</h4>
+  `,
   styleUrls: ['./click.component.scss']
 })
 export class ClickComponent {

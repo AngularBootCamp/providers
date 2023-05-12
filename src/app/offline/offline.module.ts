@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ClickService } from '../click.service';
 import { ClickComponent } from '../click/click.component';
 import { ClickModule } from '../click/click.module';
+import { ClickService } from '../click.service';
 
 import { OfflineService } from './offline.service';
 

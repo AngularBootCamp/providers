@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import {
   Subject,
   firstValueFrom,
+  map,
   shareReplay,
   startWith,
   switchMap
@@ -17,7 +18,10 @@ export class SinglePlayerService implements ClickService {
   private refresh = new Subject<void>();
   readonly clickCount = this.refresh.pipe(
     startWith(undefined),
-    switchMap(() => this.http.get<number>(apiUrl + '/count')),
+    switchMap(() =>
+      this.http.get<{ count: number }>(apiUrl + '/count')
+    ),
+    map(response => response.count),
     shareReplay({ refCount: true, bufferSize: 1 })
   );
 
