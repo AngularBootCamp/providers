@@ -1,3 +1,4 @@
+import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
 
 import { ClickService } from '../click.service';
@@ -10,7 +11,9 @@ import { ClickService } from '../click.service';
     </button>
     <h4># of Clicks: {{ totalClicks | async }}</h4>
   `,
-  styleUrls: ['./click.component.scss']
+  styleUrls: ['./click.component.scss'],
+  standalone: true,
+  imports: [AsyncPipe]
 })
 export class ClickComponent {
   readonly totalClicks = this.service.clickCount;
