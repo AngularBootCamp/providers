@@ -11,7 +11,7 @@ import { ClickService } from '../click.service';
     </button>
     <h4># of Clicks: {{ totalClicks | async }}</h4>
   `,
-  styleUrls: ['./click.component.scss'],
+  styleUrl: './click.component.scss',
   standalone: true,
   imports: [AsyncPipe]
 })
