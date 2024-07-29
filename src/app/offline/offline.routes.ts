@@ -5,7 +5,7 @@ import { ClickService } from '../click.service';
 
 import { OfflineService } from './offline.service';
 
-const routes: Routes = [
+const offlineRoutes: Routes = [
   {
     path: '',
     component: ClickComponent,
@@ -18,4 +18,4 @@ const routes: Routes = [
   }
 ];
 
-export default routes;
+export default offlineRoutes;

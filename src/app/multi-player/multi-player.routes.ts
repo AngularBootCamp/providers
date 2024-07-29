@@ -12,7 +12,7 @@ const config: SocketIoConfig = {
   options: {}
 };
 
-const routes: Routes = [
+const multiplayerRoutes: Routes = [
   {
     path: '',
     component: ClickComponent,
@@ -26,4 +26,4 @@ const routes: Routes = [
   }
 ];
 
-export default routes;
+export default multiplayerRoutes;

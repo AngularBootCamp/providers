@@ -6,7 +6,7 @@ import { ClickService } from '../click.service';
 
 import { SinglePlayerService } from './single-player.service';
 
-const routes: Routes = [
+const singlePlayerRoutes: Routes = [
   {
     path: '',
     component: ClickComponent,
@@ -20,4 +20,4 @@ const routes: Routes = [
   }
 ];
 
-export default routes;
+export default singlePlayerRoutes;
